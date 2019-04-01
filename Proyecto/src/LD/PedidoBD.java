@@ -31,9 +31,9 @@ public class PedidoBD
       while(rs.next())
       {
     	  
-        clsPedido nuevoPedido = new clsPedido(  	rs.getString("IdCodigo"),
+        clsPedido nuevoPedido = new clsPedido(rs.getInt("IdCodigo"),
                                         rs.getString("nombre"),
-                                        rs.getInt("DNI"));                                        
+                                        rs.getString("DNI"));                                        
         vectorBD.add(nuevoPedido);
       }  
        
@@ -62,7 +62,7 @@ public class PedidoBD
 		String nombre = rs.getString("nombre");
 		String dni = rs.getString("dni");
 
-		clsPedido c = new clsPedido(nombre , dni, IdCodigo);
+		clsPedido c = new clsPedido(IdCodigo , dni, nombre);
 
 		return c;
 	} catch (SQLException se) {
@@ -125,7 +125,7 @@ public class PedidoBD
       }
       else
       {
-          System.out.println("Coche Existente!");
+          System.out.println("Pedido Existente!");
       }
        
       GestorBD.getInstance().disconnect();
@@ -136,5 +136,12 @@ public class PedidoBD
         se.printStackTrace();
     }
  }
+
+
+
+public static List<clsPedido> cargarListaclsPedido() {
+	// TODO Auto-generated method stub
+	return null;
+}
 
 }

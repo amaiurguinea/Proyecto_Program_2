@@ -6,7 +6,7 @@ public class clsPatatas extends clsPedido {
 
 
     public clsPatatas(String nombre, String DNI, int IDcodigo , String tipo, double precio) {
-    	super(nombre, DNI, IDcodigo);
+    	super(IDcodigo, DNI, nombre);
         this.tipo2 = tipo;
         this.precio2 = precio;
     }
