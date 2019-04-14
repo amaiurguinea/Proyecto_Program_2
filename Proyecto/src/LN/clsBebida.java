@@ -6,7 +6,7 @@ public class clsBebida extends clsPedido {
     private double precio1;
 
     public clsBebida(String nombre, String DNI, int IDcodigo , String tipo1, String tamaño1, double precio1) {
-        super( nombre, DNI, IDcodigo );
+        super( IDcodigo, nombre, DNI  );
         this.tipo1 = tipo1;
         this.tamaño1 = tamaño1;
         this.precio1 = precio1;

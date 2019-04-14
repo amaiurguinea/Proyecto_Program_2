@@ -1,11 +1,13 @@
 package LN;
 
-public class clsPedido extends clsCliente {
+import Comun.ItfProperty;
+
+public class clsPedido extends clsCliente implements ItfProperty{
 
     private int IDcodigo;
 
-    public clsPedido(String nombre, String DNI, int IDcodigo) {
-        super(nombre, DNI);
+    public clsPedido(int iDcodigo, String nombre, String DNI) {
+        super( nombre, DNI);
         this.IDcodigo = IDcodigo;
     }
 
@@ -18,6 +20,17 @@ public class clsPedido extends clsCliente {
     }
 
 	public void setPrecioTotal(double precioTotal) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String getObjectProperty(String propiedad) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setObjectProperty(String propiedad, Object valor) {
 		// TODO Auto-generated method stub
 		
 	}
